@@ -1,0 +1,243 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ h1{
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.repos-container{
+    width: 900px;
+    margin: auto;
+    background-color: #f6f6f6;
+}
+
+.repos-container .get-repos{
+    padding: 20px;
+    display: flex;
+    background-color: #EEE;
+}
+
+.repos-container .get-repos input{
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    font-size: 20px;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.repos-container .get-repos input:focus{
+    outline: 2px solid #000;
+}
+
+.repos-container .get-repos .get-repos-button{
+    width: 140px;
+    margin-left: 15px;
+    height: 55px;
+    background-color: #000;
+    color: #FFF;
+    line-height: 55px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.repos-container .get-repos .get-repos-button:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.repos-container .get-repos .get-repos-button:active{
+    transform: scale(0.9);
+}
+
+.repos-container .show-data{
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+.repos-container .show-data .repo-box{
+    background-color: #FFF;
+    padding: 20px;
+}
+
+.repos-container .show-data .repo-box:not(:last-child){
+    margin-bottom: 12px;
+}
+
+.repos-container .show-data .repo-box a,
+.repos-container .show-data .repo-box span{
+    float: right;
+    margin-left: 5px;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 12px;
+    width: 90px;
+    text-align: center;
+    padding: 5px;
+}
+
+.repos-container .show-data .repo-box a{
+    text-decoration: none;
+    background-color: rgb(50, 50, 244);
+}
+
+.repos-container .show-data .repo-box span{
+    background-color: #E91E63;
+}
+
+
+/* Repository Box */
+.repo-box {
+    background-color: #FFF;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* First Row - Name, Stars, Link */
+.repo-first-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.repo-name {
+    /*font-size: 16px; */
+    flex-grow: 1;
+    color: #333; 
+}
+
+/* Stars Count Style */
+.stars-count {
+    margin: 0 15px;
+    color: #E91E63;
+    font-weight: bold;
+}
+
+/* Fork Count Style */
+.watchers-count {
+    margin: 0 15px;
+    color: #6a737d;
+    font-weight: bold;
+}
+
+.stars-count i
+.watchers-count i {
+    margin-right: 5px;
+    color: #FFF;
+}
+
+/* Fork Count Style */
+.forks-count {
+    margin: 0 10px;
+    color: #6a737d;
+    font-weight: bold;
+}
+
+.forks-count i {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 3px;
+    color: #6a737d;
+}
+
+.repo-link {
+    background-color: rgb(50, 50, 244);
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Description */
+.repo-description {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Languages */
+.repo-languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.language-tag {
+    background-color: #f1f8ff;
+    color: #0366d6;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    border: 1px solid #d1e5ff;
+}
+
+/* Loading and Error States */
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+}
+
+.loading i {
+    margin-right: 8px;
+}
+
+.error {
+    color: #d32f2f;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Mobile styles (applied only on small screens) */
+@media (max-width: 768px) {
+    .repos-container {
+        width: 100%; 
+        min-height: 100vh; 
+        margin: 0;
+        border-radius: 0; 
+    }
+
+    .get-repos,
+    .show-data {
+        padding: 15px;
+    }
+
+    /* Force full-width elements */
+    .get-repos input,
+    .get-repos .get-repos-button,
+    .repo-box {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Adjust first row layout */
+    .repo-first-row {
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* Make metrics smaller */
+    .stars-count,
+    .watchers-count,
+    .forks-count {
+        font-size: 14px;
+        margin: 0 5px 0 0;
+    }
+}
