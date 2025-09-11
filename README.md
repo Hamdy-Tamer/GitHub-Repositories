@@ -1,3 +1,5 @@
+# GitHub Repository Search
+
 A clean, responsive web app that fetches and displays GitHub user repositories with:
 - Repository details (name, description, language)
 - Engagement metrics (stars, watchers, forks)
